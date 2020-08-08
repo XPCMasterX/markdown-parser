@@ -1,0 +1,12 @@
+{
+  "name": "mparser",
+  "version": "1.0.0",
+  "description": "a markdown parser for JS and NodeJS",
+  "main": "mparser.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Varshith",
+  "license": "ISC"
+}
