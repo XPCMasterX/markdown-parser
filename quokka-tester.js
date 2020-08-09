@@ -1,3 +1,5 @@
+var x = {};
+x[0] = "hello";
+x[0][0] = "hello";
 
-var result = lastCharRemoved;
-console.log(result);
+console.log(x[0][0])
