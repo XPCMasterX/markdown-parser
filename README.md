@@ -7,4 +7,9 @@ A markdown parser for Javascript and NodeJS.
 Use `import markdown-parser from './modules/markdownparse.js`.
 
 ### Authors
-###### Varshith
+#### Varshith
+
+
+Todo:
+
+Add error checking to mparser.js
