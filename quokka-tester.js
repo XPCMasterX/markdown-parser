@@ -1,5 +1,1 @@
-var x = {};
-x[0] = "hello";
-x[0][0] = "hello";
-
-console.log(x[0][0])
+console.log(/^\_{2}[ -~]*\_{2}$/.test("__hello__"))

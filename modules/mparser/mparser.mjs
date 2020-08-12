@@ -10,12 +10,12 @@ class Mparser {
         this.markdownTrimmed = this.markdown.trim().split(' ');
         this.regexps = [
             {
-                regex: /^\*[ -~]*\*$/,
+                regex: /^\*[^*]*\*$/,
                 tags: ["<i>", "</i>"],
                 type: "italics"
             },
             {
-                regex: /^\_[ -~]*\_$/,
+                regex: /^\_[^_]*\_$/,
                 tags: ["<i>", "</i>"],
                 type: "italics2"
             },
@@ -34,28 +34,28 @@ class Mparser {
                 tags: ["<del>", "</del>"],
                 type: "strikethrough"
             },
-            
         ];
         this.hasMatchedRegex = false;
     }
 
     matchBold() {
         for (var i = 0; i < this.markdownTrimmed.length; i++) {
-            /*this.hasMatchedRegex = false;
-            for (var j = 0; i < this.markdownTrimmed.length; j++) {
+            this.hasMatchedRegex = false;
+            for (var j = 0; j < this.markdownTrimmed.length; j++) {
                 if (this.markdownTrimmed[i].match(this.regexps[j].regex) !== null && !this.hasMatchedRegex) {
-                    this.parsedObject.push(this.markdownTrimmed[i]);
+                    this.parsedObject[i] = {};
+                    this.parsedObject[i].text = this.markdownTrimmed[i];
                     this.parsedObject[i].type = this.regexps[j].type;
                     this.parsedObject[i].tags = this.regexps[j].tags;
                     this.hasMatchedRegex = true;
                 }
             }
             if (!this.hasMatchedRegex) {
-                this.parsedObject.push(this.markdownTrimmed[i]);
+                this.parsedObject[i] = {};
+                this.parsedObject[i].text = this.markdownTrimmed[i];
                 this.parsedObject[i].type = "text";
                 this.parsedObject[i].tags = this.defaultHTMLTag;
-            }*/
-            console.log(this.regexps.length)
+            }
         }
     }
 }
