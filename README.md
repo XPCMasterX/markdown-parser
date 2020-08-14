@@ -6,6 +6,9 @@ A markdown parser for Javascript and NodeJS.
 ## How to Load
 Use `import markdown-parser from './modules/markdownparse.js`.
 
+## Notes
+When using this in NodeJS, use the `--experimental-json-modules` option as WHATWG JSON modules specification are still being standardized according to https://nodejs.org/api/esm.html#esm_experimental_json_modules.
+
 ### Authors
 #### Varshith
 
